@@ -2,18 +2,18 @@
 
 function start_quiz(){
 
-    let tiempoInicio = Date.now();
+    const tiempoInicio = Date.now();
 
-    let nombre = prompt('¿Cómo te llamas?');
-    let respuesta_1 = prompt(nombre + ' '+ ', ¿cuál es la capital de Italia?');
+    const nombre = prompt('¿Cómo te llamas?');
+    const respuesta_1 = prompt(nombre + ' '+ ', ¿cuál es la capital de Italia?');
     let cajaResultado = document.querySelector( '#contenedor_fallo_pregunta' );
 
 
     if (respuesta_1 === 'Roma'){
-        let respuesta_2 = prompt(nombre + ' '+ ', ¿en qué estación del año estamos?');
+        const respuesta_2 = prompt(nombre + ' '+ ', ¿en qué estación del año estamos?');
 
         if (respuesta_2 ==='Otoño'){
-            let respuesta_3 = prompt(nombre + ' '+ '¿en qué continente está China?');
+            const respuesta_3 = prompt(nombre + ' '+ '¿en qué continente está China?');
             
             if (respuesta_3 ==='Asia'){
                 cajaResultado.innerHTML = '<h1> Felicidades ' + nombre + ', todas las respuestas son correctas</h1>';
@@ -29,11 +29,11 @@ function start_quiz(){
     }
 
 
-    let tiempoFin = Date.now();
+    const tiempoFin = Date.now();
 
-    let tiempoTranscurrido = (tiempoFin - tiempoInicio)/1000;
+    const tiempoTranscurrido = (tiempoFin - tiempoInicio)/1000;
 
     console.log(tiempoTranscurrido)
-    let cajaTiempo = document.querySelector( '.reloj' );  
+    const cajaTiempo = document.querySelector( '.reloj' );  
     cajaTiempo.innerHTML = '<h2> Han transcurrido un total de ' + tiempoTranscurrido + ' '+ 'segundos</h2>'
 }
