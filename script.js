@@ -6,7 +6,7 @@ function start_quiz(){
 
     const nombre = prompt('¿Cómo te llamas?');
     const respuesta_1 = prompt(nombre + ' '+ ', ¿cuál es la capital de Italia?');
-    let cajaResultado = document.querySelector( '#contenedor_fallo_pregunta' );
+    const cajaResultado = document.querySelector( '#contenedor_fallo_pregunta' );
 
 
     if (respuesta_1 === 'Roma'){
